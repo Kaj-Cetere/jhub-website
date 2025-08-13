@@ -1,13 +1,16 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#6ABAB1] to-[#2f6f69] text-white">
       <header className="border-b border-white/10 bg-black/30 backdrop-blur">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
-          <a href="/" className="flex items-center gap-2">
-            <img src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" />
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" width={32} height={32} />
             <span className="text-lg font-semibold">JHub</span>
-          </a>
-          <a href="/" className="rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10">Back to Home</a>
+          </Link>
+          <Link href="/" className="rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10">Back to Home</Link>
         </div>
       </header>
 
@@ -19,7 +22,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold">1. Introduction</h2>
             <p className="mt-2 text-white/80">
-              JHub ("we", "us", or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your choices.
+              JHub (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your choices.
             </p>
           </section>
 
@@ -90,8 +93,8 @@ export default function PrivacyPolicy() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-8 text-sm text-white/70">
           <span>© {new Date().getFullYear()} JHub</span>
           <div className="space-x-4">
-            <a className="hover:text-white" href="/">Home</a>
-            <a className="hover:text-white" href="/privacy">Privacy</a>
+            <Link className="hover:text-white" href="/">Home</Link>
+            <Link className="hover:text-white" href="/privacy">Privacy</Link>
           </div>
         </div>
       </footer>

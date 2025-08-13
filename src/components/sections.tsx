@@ -168,7 +168,7 @@ export function Showcase() {
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-6 lg:grid-cols-3">
-          {cards.map(({ title, desc, icon: Icon }, i) => (
+          {cards.map(({ title, desc, icon: Icon }) => (
             <div key={title} className="relative overflow-hidden rounded-3xl ring-1 ring-brand/40 bg-gradient-to-b from-brand/35 via-brand/25 to-white p-6">
               <div className="flex items-center gap-2">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">

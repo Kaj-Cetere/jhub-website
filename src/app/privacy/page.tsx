@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold">8. Children's Privacy</h2>
+            <h2 className="text-xl font-semibold">8. Children&apos;s Privacy</h2>
             <p className="mt-2 text-white/80">JHub is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect data from children.</p>
           </section>
 

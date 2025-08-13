@@ -15,6 +15,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   MapPinned,
@@ -113,7 +114,7 @@ export default function JHubLanding() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 text-white backdrop-blur">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-2">
-            <img src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" />
+            <Image src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" width={32} height={32} />
             <span className="text-lg font-semibold">JHub</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -296,10 +297,12 @@ export default function JHubLanding() {
             className="rounded-2xl border border-white/10 bg-black/40 p-8 shadow-sm backdrop-blur text-center"
           >
             <div className="relative mx-auto w-32 h-32 mb-6">
-              <img 
+              <Image 
                 src="/images/Shua.jpg" 
                 alt="Shua - Co-Founder" 
                 className="w-full h-full object-cover rounded-full border-4 border-[#6ABAB1]/30"
+                width={128}
+                height={128}
               />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Shua</h3>
@@ -308,7 +311,7 @@ export default function JHubLanding() {
               Shua brings years of experience in community building and technology leadership. 
               With a background in product development and a passion for connecting Jewish communities worldwide, 
               he envisions JHub as the bridge that brings together Jews from all walks of life. 
-              His expertise in scaling platforms and understanding user needs drives JHub's mission 
+              His expertise in scaling platforms and understanding user needs drives JHub&apos;s mission 
               to make Jewish life more accessible and connected globally.
             </p>
           </motion.div>
@@ -322,10 +325,12 @@ export default function JHubLanding() {
             className="rounded-2xl border border-white/10 bg-black/40 p-8 shadow-sm backdrop-blur text-center"
           >
             <div className="relative mx-auto w-32 h-32 mb-6">
-              <img 
+              <Image 
                 src="/images/Ilan.jpg" 
                 alt="Ilan - Co-Founder" 
                 className="w-full h-full object-cover rounded-full border-4 border-[#6ABAB1]/30"
+                width={128}
+                height={128}
               />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Ilan</h3>
@@ -335,7 +340,7 @@ export default function JHubLanding() {
               secure platforms. His technical vision and commitment to Jewish community values 
               ensure that JHub remains both innovative and respectful of tradition. 
               With experience in enterprise software and mobile applications, 
-              he leads the technical strategy that makes JHub's global reach possible while 
+              he leads the technical strategy that makes JHub&apos;s global reach possible while 
               maintaining the personal touch that makes each community special.
             </p>
           </motion.div>
@@ -362,7 +367,7 @@ export default function JHubLanding() {
             { icon: Globe2, title: "Create your profile", desc: "Tell us where you are and what you love." },
             { icon: MapPinned, title: "Discover events", desc: "Browse the map & feed matched to your interests." },
             { icon: CalendarDays, title: "RSVP in seconds", desc: "Add to calendar and get a QR ticket." },
-            { icon: Ticket, title: "Check in easily", desc: "Flash your QR—you're in." },
+            { icon: Ticket, title: "Check in easily", desc: "Flash your QR—you&apos;re in." },
             { icon: MessageSquare, title: "Share & connect", desc: "Chat, post photos, and follow friends." },
             { icon: ShieldCheck, title: "Safe by design", desc: "Verified organizers and moderation tools." },
           ].map((step, i) => (
@@ -542,7 +547,7 @@ export default function JHubLanding() {
       <footer className="border-t border-white/10 bg-[#2f6f69]">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
-            <img src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" />
+            <Image src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" width={32} height={32} />
             <div>
               <div className="font-semibold">JHub</div>
               <div className="text-xs text-white/60">Connecting Jews around the world</div>
@@ -578,10 +583,12 @@ function Carousel({ images }: { images: ImageItem[] }) {
   return (
     <div className="relative h-full w-full">
       {images.map((img, i) => (
-        <img
+        <Image
           key={i}
           src={img.src}
           alt={img.alt}
+          width={300}
+          height={600}
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
@@ -615,7 +622,7 @@ function ScreenshotMasonry({ images }: { images: ImageItem[] }) {
           className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 p-3 shadow-sm backdrop-blur"
         >
           <div className="aspect-[9/19] overflow-hidden rounded-2xl border border-white/10 bg-black">
-            <img src={img.src} alt={img.alt} className="h-full w-full object-cover" />
+            <Image src={img.src} alt={img.alt} className="h-full w-full object-cover" width={200} height={400} />
           </div>
           <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100">
             <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/60 to-transparent" />

@@ -2,7 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+  --brand: #6ABAB1;
 }
 
 @theme inline {
@@ -23,4 +24,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Brand utilities */
+.bg-brand { background-color: var(--brand); }
+.text-brand { color: var(--brand); }
+.from-brand { --tw-gradient-from: var(--brand); --tw-gradient-to: rgb(106 186 177 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.via-brand { --tw-gradient-to: rgb(106 186 177 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--brand), var(--tw-gradient-to); }
+.to-brand { --tw-gradient-to: var(--brand); }
+
+/* Soothing subtle noise overlay for depth */
+.noise { position: relative; }
+.noise:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }

@@ -115,7 +115,6 @@ export default function JHubLanding() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-2">
             <Image src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" width={32} height={32} />
-            <span className="text-lg font-semibold">JHub</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             <a href="#features" className="text-sm text-white/80 hover:text-white">Features</a>

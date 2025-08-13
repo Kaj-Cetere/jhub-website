@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/images/logo.PNG" alt="JHub Logo" className="h-8 w-auto" width={32} height={32} />
-            <span className="text-lg font-semibold">JHub</span>
+
           </Link>
           <Link href="/" className="rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/10">Back to Home</Link>
         </div>
